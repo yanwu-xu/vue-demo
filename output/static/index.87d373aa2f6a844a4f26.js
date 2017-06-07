@@ -87,7 +87,7 @@ var Component = __webpack_require__(5)(
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "D:\\mine\\vue-demo\\src\\components\\Favlist.vue"
+Component.options.__file = "/Users/xudongdong-i/workspace/vue-demo/src/components/Favlist.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Favlist.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -9835,7 +9835,7 @@ exports = module.exports = __webpack_require__(4)(undefined);
 
 
 // module
-exports.push([module.i, "\nhtml{\n\tbackground: #666;\n}\n", ""]);
+exports.push([module.i, "\nhtml{\n\tbackground: #e14577;\n}\n", ""]);
 
 // exports
 
@@ -10025,7 +10025,7 @@ module.exports = function normalizeComponent (
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', _vm._l((10), function(n) {
-    return _c('div', [_vm._v("div")])
+    return _c('div', [_vm._v("www")])
   }))
 },staticRenderFns: []}
 module.exports.render._withStripped = true

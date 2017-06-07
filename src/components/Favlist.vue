@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<div v-for="n in 10">aaaa</div>
+		<div v-for="n in 10">www</div>
 	</div>
 </template>
 
@@ -16,6 +16,6 @@
 
 <style>
 	html{
-		background: #666;
+		background: #e191a4;
 	}
 </style>
