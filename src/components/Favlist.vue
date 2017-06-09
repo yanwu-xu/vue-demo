@@ -1,10 +1,14 @@
 <template>
 	<div>
-		<div v-for="n in 10">www</div>
+		<div id="aaa">
+			<div>11111</div>
+			<router-view></router-view>
+		</div>
 	</div>
 </template>
 
 <script>
+	console.log(1)
 	export default {
 		data () {
 			return {
