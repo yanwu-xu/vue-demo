@@ -1,26 +1,22 @@
 import Vue from '../../node_modules/vue/dist/vue.js'
-import VueRouter from '../../node_modules/vue-router/dist/vue-router.js'
+import router from '../../node_modules/vue-router/dist/vue-router.min'
 
-Vue.use(VueRouter)
-
-export default new VueRouter({
+Vue.use(router)
+console.log(router)
+export default new router({
     routes: [
         {
             path: '/',
             redirect: '/login'
         },
         {
-            path: '/a',
-            component: resolve => require(['../components/a.vue'], resolve),
+            path: '/b',
+            component: resolve => require(['../components/b.vue'], resolve),
             children:[
-                {
-                    path: '/b',
-                    component: resolve => require(['../components/b.vue'], resolve)
-                },
                 {
                     path: '/c',
                     component: resolve => require(['../components/c.vue'], resolve)
-                },
+                }
             ]
         },
         {
@@ -29,3 +25,5 @@ export default new VueRouter({
         }
     ]
 })
+
+console.log(33333)

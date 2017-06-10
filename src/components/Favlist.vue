@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<div id="aaa">
+		<div id="app">
 			<div>11111</div>
 			<router-view></router-view>
 		</div>
@@ -8,14 +8,7 @@
 </template>
 
 <script>
-	console.log(1)
-	export default {
-		data () {
-			return {
-				msg: 'Hello World!'
-			}
-		}
-	}
+	console.log(2222222)
 </script>
 
 <style>
