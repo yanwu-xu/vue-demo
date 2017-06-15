@@ -1,7 +1,7 @@
 <template>
-    <div>ddddd</div>
+    <div>aaaaa</div>
 </template>
 
 <script>
-    console.log(77777)
+
 </script>

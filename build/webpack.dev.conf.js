@@ -8,18 +8,17 @@ var config = require('./webpack.config');
 config.output.publicPath = '/';
 
 // 动态向入口配置中注入 webpack-hot-middleware/client
-//var devClient = 'webpack-hot-middleware/client'
-/*var devClient = './build/dev-client'
+var devClient = './build/dev-client'
 Object.keys(config.entry).forEach(function (name, i) {
 	var extras = [devClient]
 	config.entry[name] = extras.concat(config.entry[name])
-})*/
+})
 
 config.plugins = [
     // 添加三个插件
     new webpack.optimize.OccurrenceOrderPlugin(),
-    //new webpack.HotModuleReplacementPlugin(),                 //坑···大坑
     new webpack.NoEmitOnErrorsPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
 
     new HtmlWebpackPlugin({								//创建html，自动引入js文件
         filename: 'src/index.html',
