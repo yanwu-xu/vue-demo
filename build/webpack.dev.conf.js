@@ -2,6 +2,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin')
 var path = require('path')
 var webpack = require('webpack')
 var FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
+var ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 // 引入基本配置
 var config = require('./webpack.config');
@@ -17,6 +18,9 @@ Object.keys(config.entry).forEach(function (name, i) {
 })
 
 config.plugins = [
+    // 提取css为单文件
+    new ExtractTextPlugin("[name].[contenthash].css"),
+
     // 添加三个插件
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),

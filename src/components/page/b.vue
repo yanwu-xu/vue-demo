@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div>bbbbb</div>
+        <div class="b">bbbbb</div>
         <router-view></router-view>
         <v-footer></v-footer>
     </div>
@@ -15,3 +15,7 @@
         }
     }
 </script>
+
+<style>
+    @import "../../css/b.css";
+</style>
