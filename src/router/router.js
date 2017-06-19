@@ -1,6 +1,5 @@
-import Vue from '../../node_modules/vue/dist/vue.js'
-import router from '../../node_modules/vue-router/dist/vue-router.min.js'
-
+import Vue from 'vue';
+import router from 'vue-router';
 Vue.use(router)
 
 export default new router({
@@ -11,21 +10,21 @@ export default new router({
         },
         {
             path: '/b',
-            component: resolve => require(['../components/b.vue'], resolve),
+            component: resolve => require(['../components/page/b.vue'], resolve),
             children:[
                 {
                     path: '/b/c',
-                    component: resolve => require(['../components/c.vue'], resolve)
+                    component: resolve => require(['../components/page/c.vue'], resolve)
                 },
                 {
                     path: '/b/d',
-                    component: resolve => require(['../components/d.vue'], resolve)
+                    component: resolve => require(['../components/page/d.vue'], resolve)
                 },
             ]
         },
         {
             path: '/login',
-            component: resolve => require(['../components/a.vue'], resolve)
+            component: resolve => require(['../components/page/a.vue'], resolve)
         }
     ]
 })
