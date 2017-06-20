@@ -5,5 +5,5 @@
 </template>
 
 <style>
-	@import "../../css/common.css";
+	@import "../../css/b.css";
 </style>

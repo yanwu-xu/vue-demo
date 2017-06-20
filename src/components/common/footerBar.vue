@@ -2,10 +2,10 @@
     <div>
         <div class="footer_bar">
             <ul>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
+                <li><router-link class="router-link" to="/login">a</router-link></li>
+                <li><router-link class="router-link" to="/b">b</router-link></li>
+                <li><router-link class="router-link" to="/b/c">c</router-link></li>
+                <li><router-link class="router-link" to="/b/d">d</router-link></li>
             </ul>
         </div>
     </div>

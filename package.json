@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint my-files.js",
-    "build": "webpack --display-modules --display-chunks --config build/webpack.prod.conf.js",
+    "build": "webpack --color --display-modules --display-chunks --config build/webpack.prod.conf.js",
     "dev": "node ./build/dev-server.js"
   },
   "repository": {
@@ -33,12 +33,13 @@
     "extract-text-webpack-plugin": "^2.1.2",
     "friendly-errors-webpack-plugin": "^1.6.1",
     "html-webpack-plugin": "^2.28.0",
+    "style-loader": "^0.18.2",
     "vue-hot-reload-api": "^2.1.0",
     "vue-html-loader": "^1.2.4",
     "vue-loader": "^12.2.1",
     "vue-style-loader": "^3.0.1",
     "vue-template-compiler": "^2.3.3",
-    "webpack": "^2.3.3",
+    "webpack": "^3.0.0",
     "webpack-dev-middleware": "^1.10.2",
     "webpack-dev-server": "^2.4.5",
     "webpack-hot-middleware": "^2.18.0",
@@ -48,6 +49,7 @@
     "axios": "^0.16.2",
     "babel-core": "^6.24.1",
     "babel-polyfill": "^6.23.0",
+    "moment": "^2.18.1",
     "vue": "^2.3.3",
     "vue-router": "^2.5.3"
   }

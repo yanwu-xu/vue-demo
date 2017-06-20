@@ -19,7 +19,7 @@ Object.keys(config.entry).forEach(function (name, i) {
 
 config.plugins = [
     // 提取css为单文件
-    new ExtractTextPlugin("[name].[contenthash].css"),
+    new ExtractTextPlugin("css/[name].[contenthash].css"),
 
     // 添加三个插件
     new webpack.optimize.OccurrenceOrderPlugin(),
