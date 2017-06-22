@@ -33,12 +33,24 @@ compiler.plugin('compilation', function (compilation) {
 // 注册中间件
 app.use(devMiddleware)
 app.use(hotMiddleware)
-
+/*var staticPath = path.posix.join(config.dev.assetsPublicPath, config.dev.assetsSubDirectory)
+app.use(staticPath, express.static('./static'))*/
 // 监听 8888端口，开启服务器
 app.listen(8888, function (err) {
     if (err) {
         console.log(err)
         return
     }
-    console.log('Listening at http://localhost:8888')
 })
+
+var _resolve
+var readyPromise = new Promise(resolve => {
+    _resolve = resolve
+})
+
+module.exports = {
+    ready: readyPromise,
+    close: () => {
+        server.close()
+    }
+}

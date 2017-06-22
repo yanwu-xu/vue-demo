@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="b">bbbbbbbbbbbbbbbbbbbbbbbbb</div>
+        <div class="a b">bbbbbbbbbbbbbbbbbbbbbbbbb</div>
         <router-view></router-view>
         <v-footer></v-footer>
     </div>
@@ -17,5 +17,5 @@
 </script>
 
 <style>
-    /*@import "../../css/b.css";*/
+    @import "../../css/b.css";
 </style>

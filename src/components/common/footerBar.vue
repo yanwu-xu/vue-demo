@@ -3,7 +3,7 @@
         <div class="footer_bar">
             <ul>
                 <li><router-link class="router-link" to="/login">a</router-link></li>
-                <li><router-link class="router-link" to="/b">b</router-link></li>
+                <li><router-link class="router-link" to="/b/c">b</router-link></li>
                 <li><router-link class="router-link" to="/b/c">c</router-link></li>
                 <li><router-link class="router-link" to="/b/d">d</router-link></li>
             </ul>

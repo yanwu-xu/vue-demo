@@ -9,11 +9,11 @@ export default new router({
             redirect: '/login'
         },
         {
-            path: '/b',
-            component: resolve => require(['../components/page/b.vue'], resolve),
+            path: '/b/c',
+            component: resolve => require(['../components/page/b.vue'], resolve),   //实现按需加载
             children:[
                 {
-                    path: '/b/c',
+                    path: '/',
                     component: resolve => require(['../components/page/c.vue'], resolve)
                 },
                 {
