@@ -32,6 +32,29 @@
             <input type="text" v-model.trim.lazy.number="obj.a">
             {{ obj.a }}
         </div>
+
+        <div class="radio">
+            <span v-for="(item, index) in radio">
+                <input :id="item.key" type="radio" name="radio" :value="item.value.a" v-model="radioVal">
+                <label :for="item.key">{{ item.key }}</label>
+            </span>
+            <div v-if="radioVal">radioVal: {{ radioVal }}</div>
+        </div>
+
+        <div class="checkbox">
+            <span v-for="(item, index) in radio">
+                <input type="checkbox" :id="item.value.a" name="checkbox" :value="item.value.a" v-model="checkboxVal">
+                <label :for="item.value.a">{{ item.key }}</label>
+            </span>
+            <div v-if="checkboxVal.length">checkboxVal: {{ checkboxVal }}</div>
+        </div>
+
+        <div class="select">
+            <select name="select" id="select" v-model="selectVal">
+                <option v-for="(item, index) in radio" :value="item.value.a">{{ item.key }}</option>
+            </select>
+            <div v-if="selectVal">selectVal: {{ selectVal }}</div>
+        </div>
     </div>
 </template>
 
@@ -46,6 +69,9 @@
     export default {
         data: function(){
             return{
+                radioVal: '',
+                checkboxVal: [],
+                selectVal: '',
                 a: 1,
                 arr: [
                     {a: null, b: 2},
@@ -58,7 +84,13 @@
                     b: '222',
                     c: '333',
                     d: '444'
-                }
+                },
+                radio: [
+                    {key: 'aaa', value: {a: 'a', b: 'b'}},
+                    {key: 'bbb', value: {a: 'c', b: 'd'}},
+                    {key: 'ccc', value: {a: 'e', b: 'f'}},
+                    {key: 'ddd', value: {a: 'g', b: 'h'}}
+                ]
             }
         },
         methods: {
@@ -116,5 +148,16 @@
         border: 1px solid #ff4564;
         outline: none;
         border-radius: 5px;
+    }
+    .radio{
+        border: 1px solid #40a6ff;
+    }
+    .radio span{
+        margin-right: 15px;
+    }
+    input[type="radio"]{
+        border: 1px solid red;
+        outline: none;
+        background: #fff;
     }
 </style>
