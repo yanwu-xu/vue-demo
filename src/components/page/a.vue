@@ -55,6 +55,13 @@
             </select>
             <div v-if="selectVal">selectVal: {{ selectVal }}</div>
         </div>
+
+        <div>
+            <img src="../../img/img.png" alt="test">
+        </div>
+        <div>
+            <img src="../../img/img2.png" alt="test">
+        </div>
     </div>
 </template>
 

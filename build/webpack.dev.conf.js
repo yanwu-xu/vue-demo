@@ -8,7 +8,7 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var config = require('./webpack.config');
 
 config.output.publicPath = '/';
-
+config.module.rules[2].query.name = 'img/[name].[hash:7].[ext]'
 // 动态向入口配置中注入 webpack-hot-middleware/client
 var devClient = './build/dev-client'
 Object.keys(config.entry).forEach(function (name, i) {
