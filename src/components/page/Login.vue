@@ -1,4 +1,4 @@
-<template xmlns:v-validate="http://www.w3.org/1999/xhtml">
+<template>
     <div class="login">
 
             <form novalidate name="loginform">
