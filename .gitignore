@@ -12,4 +12,5 @@ lib-cov
 .DS_Store
 *.idea
 node_modules
+dist
 .vscode
