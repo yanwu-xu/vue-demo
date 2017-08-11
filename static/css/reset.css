@@ -1,0 +1,79 @@
+@charset "utf-8";
+/*reset*/
+* {
+    -webkit-user-select:none;
+    -khtml-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+
+html {
+
+}
+
+body,div,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,iframe,input,textarea,select,label,article,aside,footer,header,menu,nav,section,time,audio,video {
+    margin:0;
+    padding:0;
+}
+article,aside,footer,header,hgroup,nav,section,audio,canvas,video {
+    display: block;
+}
+body {
+    /* font-size: 100%; */
+    font-family:"Microsoft YaHei",Helvetica,STHeiti,Droid Sans Fallback;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    width: 100%;
+    background: #eeeeee;
+}
+textarea {
+    resize: none;
+}
+iframe,img {
+    border:0;
+}
+ul,ol {
+    list-style:none;
+}
+input,
+select,
+textarea {
+    outline: 0;
+    font-family:"Microsoft YaHei";
+    -webkit-user-select:text;
+    -khtml-user-select:text;
+    -moz-user-select:text;
+    -ms-user-select:text;
+    user-select:text;
+}
+input {
+    -webkit-appearance: none;
+}
+select{
+// appearance:none;
+// -moz-appearance:none;
+// -webkit-appearance:none;
+    background:#fff;
+}
+a{
+    text-decoration: none;
+    outline: none;
+}
+.clearfix:before,
+.clearfix:after{
+    display: table;
+    content: " ";
+}
+.clearfix:after{
+    clear: both;
+}
+cite{
+    font-style: normal;
+}
+
+.flex{
+    display: -webkit-flex;
+    display: flex;
+}

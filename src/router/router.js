@@ -1,30 +1,33 @@
+/**
+ * Created by Administrator on 2017/8/1.
+ */
 import Vue from 'vue';
-import router from 'vue-router';
-Vue.use(router)
+import Router from 'vue-router';
 
-export default new router({
+Vue.use(Router);
+
+export default new Router({
     routes: [
         {
             path: '/',
             redirect: '/login'
         },
         {
-            path: '/b/c',
-            component: resolve => require(['../components/page/b.vue'], resolve),   //实现按需加载
+            path: '/readme',
+            component: resolve => require(['../components/page/Home.vue'], resolve),
             children:[
                 {
                     path: '/',
-                    component: resolve => require(['../components/page/c.vue'], resolve)
-                },
-                {
-                    path: '/b/d',
-                    component: resolve => require(['../components/page/d.vue'], resolve)
-                },
+                    component: resolve => require(['../components/page/Readme.vue'], resolve),
+                    meta: {
+                        //requireAuth: true
+                    },
+                }
             ]
         },
         {
             path: '/login',
-            component: resolve => require(['../components/page/a.vue'], resolve)
-        }
+            component: resolve => require(['../components/page/Login.vue'], resolve)
+        },
     ]
 })
