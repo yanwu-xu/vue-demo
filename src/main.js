@@ -8,28 +8,37 @@ import router from './router/router.js'
 import VueResource from 'vue-resource'
 import axios from 'axios'			//ajax插件
 import VeeValidate, { Validator } from 'vee-validate'
-import messagesZH from '../node_modules/vee-validate/dist/locale/zh_CN'
-
-Validator.updateDictionary({
-    zh_CN: {
-        messagesZH
-    }
-})
-
-const config = {
-    errorBagName: 'errors',
-    delay: 0,
-    locale: 'zh_CN',
-    messages: null,
-    strict: true
-}
-
-Vue.use(VeeValidate)
-Vue.use(VueResource)            //拦截器
-
 import '../static/css/reset.css'
-Vue.prototype.$axios = axios
 
+//自定义规则
+const isMobile = {
+    messages: {
+        en:(field, args) => '必须是11位手机号码',
+    },
+    validate: (value, args) => {
+        return value.length == 11 && /^((13|14|15|17|18)[0-9]{1}\d{8})$/.test(value)
+    }
+}
+Validator.extend('mobile', isMobile)
+
+//自定义内置规则的错误信息
+const dictionary = {
+    en: {
+        messages: {
+            required: (field) => '请输入' + field + '！',
+            max: (field, args) => field + '不能超过' + args + '位',
+            min: (field, args) => field + '不能少于' + args + '位'
+        }
+    }
+}
+Validator.updateDictionary(dictionary);
+
+Vue.use(VeeValidate, {
+    events: 'blur',     //失焦校验
+    //delay: 500           //延迟
+})
+Vue.use(VueResource)            //拦截器
+Vue.prototype.$axios = axios
 
 //拦截器
 axios.interceptors.response.use(

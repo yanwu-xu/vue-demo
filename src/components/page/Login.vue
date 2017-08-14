@@ -1,19 +1,19 @@
 <template>
     <div class="login">
 
-            <form novalidate name="loginform">
-                <p class="input-p">
-                    <label class="input-label">手机号</label>
-                    <input class="input-inp" type="text" name="phone" v-model="loginform.phone" v-validate="'required|min:6'" placeholder="请输入手机号">
-                    <p v-if="errors.has('phone')">{{ errors.first('phone') }}</p>
-                </p>
-                <p class="input-p">
-                    <label class="input-label">登录密码</label>
-                    <input class="input-inp" type="password" v-model="loginform.password" placeholder="请输入密码">
-                </p>
-
-                <button class="login-btn" @click="login('loginform')">登   录</button>
-            </form>
+        <form @submit.prevent="login('form-1')" data-vv-scope="form-1">
+            <p class="input-p">
+                <label class="input-label">手机号</label>
+                <input class="input-inp" type="text" name="phone" data-vv-as="手机号" v-model="loginform.phone" v-validate="'required|mobile'" placeholder="请输入手机号">
+                <p class="error" v-show="errors.has('form-1.phone')">{{ errors.first('form-1.phone') }}</p>
+            </p>
+            <p class="input-p">
+                <label class="input-label">登录密码</label>
+                <input class="input-inp" type="password" name="password" data-vv-as="密码" v-validate="'required|min:6'" v-model="loginform.password" placeholder="请输入密码">
+                <p class="error" v-show="errors.has('form-1.password')">{{ errors.first('form-1.password') }}</p>
+            </p>
+            <button name="button" type="submit" class="login-btn">登   录</button>
+        </form>
 
         <!--<router-link class="login-btn" to="/readme">to readme1</router-link>-->
     </div>
@@ -25,29 +25,27 @@
     export default {
         data: function() {
             return{
-                phone: '',
                 loginform: {
                     phone: '',
                     password: ''
-                },
-                msg: '',
-                rules: {
-                    phone: { minlength: 11, maxlength: 11 }
                 }
             }
         },
         methods: {
-            login(loginform) {
-                var self = this
-
-                self.$axios.post(
-                    '/account/user/login',
-                    'phone=' + self.loginform.phone + '&password=' + self.loginform.password
-                ).then((res) => {
-                    alert('成功')
-                    self.$router.push('/readme')
-                }, () => {
-                    alert('失败')
+            login(scope) {
+                let self = this
+                self.$validator.validateAll(scope).then((result) => {
+                    if(result){
+                        self.$axios.post(
+                            '/account/user/login',
+                            'phone=' + self.loginform.phone + '&password=' + self.loginform.password
+                        ).then((res) => {
+                            console.log('登录成功')
+                            self.$router.push('/readme')
+                        }, () => {
+                            console.log('登录失败')
+                        })
+                    }
                 })
             }
         }
@@ -97,5 +95,10 @@
         outline: none;
         border-radius: 4px;
         margin-top: px2rem(40);
+    }
+    .error{
+        color: #ee4919;
+        font-size: 14px;
+        margin-left: px2rem(30);
     }
 </style>
