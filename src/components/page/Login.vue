@@ -2,12 +2,12 @@
     <div class="login">
 
         <form @submit.prevent="login('form-1')" data-vv-scope="form-1">
-            <p class="input-p">
+            <p :class="{'input-p':true, 'error-p':errors.has('form-1.phone')}">
                 <label class="input-label">手机号</label>
-                <input class="input-inp" type="text" name="phone" data-vv-as="手机号" v-model="loginform.phone" v-validate="'required|mobile'" placeholder="请输入手机号">
+                <input class="input-inp" type="number" name="phone" data-vv-as="手机号" v-model="loginform.phone" v-validate="'required|mobile'" placeholder="请输入手机号" @click="clear1('form-1.phone')">
                 <p class="error" v-show="errors.has('form-1.phone')">{{ errors.first('form-1.phone') }}</p>
             </p>
-            <p class="input-p">
+            <p :class="{'input-p':true, 'error-p':errors.has('form-1.password')}">
                 <label class="input-label">登录密码</label>
                 <input class="input-inp" type="password" name="password" data-vv-as="密码" v-validate="'required|min:6'" v-model="loginform.password" placeholder="请输入密码">
                 <p class="error" v-show="errors.has('form-1.password')">{{ errors.first('form-1.password') }}</p>
@@ -15,7 +15,7 @@
             <button name="button" type="submit" class="login-btn">登   录</button>
         </form>
 
-        <!--<router-link class="login-btn" to="/readme">to readme1</router-link>-->
+        <!--<router-link class="login-btn" to="/readme">to readme page</router-link>-->
     </div>
 </template>
 
@@ -47,6 +47,11 @@
                         })
                     }
                 })
+            },
+            clear1(aa) {
+            	console.log(111)
+            	this.errors.remove(aa)
+                console.log(22222)
             }
         }
     }
@@ -95,10 +100,15 @@
         outline: none;
         border-radius: 4px;
         margin-top: px2rem(40);
+        text-align: center;
     }
     .error{
         color: #ee4919;
         font-size: 14px;
         margin-left: px2rem(30);
+        margin-top: 5px;
+    }
+    .error-p{
+        border: 1px solid #ee4919;
     }
 </style>
