@@ -14,7 +14,7 @@
             </p>
             <button name="button" type="submit" class="login-btn">登   录</button>
         </form>
-
+        <button class="login-btn" @click="bbb()">aaaa</button>
         <!--<router-link class="login-btn" to="/readme">to readme page</router-link>-->
     </div>
 </template>
@@ -47,6 +47,10 @@
                         })
                     }
                 })
+            },
+            bbb() {
+                console.log(this.$store.state.count)
+                console.log(this.$store.state.a)
             }
         }
     }

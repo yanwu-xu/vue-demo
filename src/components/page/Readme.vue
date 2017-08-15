@@ -10,7 +10,7 @@
         </div>
 
         <div>
-            <img src="../../../static/img/home/wlt.png" alt="">
+            <img src="../../../static/img/home/wlt.png" alt="图标">
         </div>
     </div>
 </template>

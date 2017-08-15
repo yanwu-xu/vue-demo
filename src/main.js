@@ -9,6 +9,7 @@ import VueResource from 'vue-resource'
 import axios from 'axios'			//ajax插件
 import VeeValidate, { Validator } from 'vee-validate'
 import '../static/css/reset.css'
+import Vuex from 'vuex'
 
 //自定义规则
 const isMobile = {
@@ -38,6 +39,7 @@ Vue.use(VeeValidate, {
     //delay: 500           //延迟
 })
 Vue.use(VueResource)            //拦截器
+Vue.use(Vuex)
 Vue.prototype.$axios = axios
 
 //拦截器
@@ -71,7 +73,23 @@ router.beforeEach((to, from, next) => {
     }
 })
 
+const store = new Vuex.Store({
+    state: {
+        count: 10,
+        a: [
+            {a: 1},
+            {b: 2}
+        ]
+    },
+    mutations: {
+        increment (state) {
+            state.count++
+        }
+    }
+})
+
 new Vue({
     router,
+    store,
     render: h => h(App)
 }).$mount('#app')
