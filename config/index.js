@@ -35,6 +35,13 @@ module.exports = {
                     '^/account':'/account'
                 }
             },
+            '/OperationWeb': {
+                target: 'http://172.30.248.226:8080',
+                changeOrigin: true,
+                pathRewrite: {
+                    '^/OperationWeb':'/OperationWeb'
+                }
+            },
         },
         // CSS Sourcemaps off by default because relative paths are "buggy"
         // with this option, according to the CSS-Loader README
