@@ -75,16 +75,26 @@ router.beforeEach((to, from, next) => {
 
 const store = new Vuex.Store({
     state: {
-        count: 10,
-        a: [
-            {a: 1},
-            {b: 2}
-        ]
+        phone: '18814884450'
     },
     mutations: {
-        increment (state) {
-            state.count++
+        increment (state, n) {
+            state.phone = n
         }
+    },
+    actions: {
+        actionA ({ commit }, n) {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    commit('increment', n)
+                    resolve()
+                }, 3000)
+            })
+        },
+        async actionB ({ dispatch, commit }, n) {
+            await dispatch('actionA')
+            commit('increment', n)
+        },
     }
 })
 

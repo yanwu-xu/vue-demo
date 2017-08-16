@@ -28,7 +28,7 @@
         },
         beforeCreate() {
             let self = this
-
+            console.log(this.$store.state.phone)
             self.$axios.get(
                 '/OperationWeb/ad/select_adc/' + 'FDWXBAN0001'
             ).then((data) => {

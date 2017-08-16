@@ -1,21 +1,34 @@
 <template>
     <div class="login">
-
         <form @submit.prevent="login('form-1')" data-vv-scope="form-1">
             <p :class="{'input-p':true, 'error-p':errors.has('form-1.phone')}">
                 <label class="input-label">手机号</label>
-                <input class="input-inp" type="number" name="phone" data-vv-as="手机号" v-model="loginform.phone" v-validate="'required|mobile'" placeholder="请输入手机号" @focus="errors.remove('phone', 'form-1')">
+                <input class="input-inp"
+                       type="number"
+                       name="phone"
+                       data-vv-as="手机号"
+                       v-model="loginform.phone"
+                       v-validate="'required|mobile'"
+                       placeholder="请输入手机号"
+                       @focus="errors.remove('phone', 'form-1')">
                 <p class="error" v-show="errors.has('form-1.phone')">{{ errors.first('form-1.phone') }}</p>
             </p>
             <p :class="{'input-p':true, 'error-p':errors.has('form-1.password')}">
                 <label class="input-label">登录密码</label>
-                <input class="input-inp" type="password" name="password" data-vv-as="密码" v-validate="'required|min:6'" v-model="loginform.password" placeholder="请输入密码" @focus="errors.remove('password', 'form-1')">
+                <input class="input-inp"
+                       type="password"
+                       name="password"
+                       data-vv-as="密码"
+                       v-validate="'required|min:6'"
+                       v-model="loginform.password"
+                       placeholder="请输入密码"
+                       @focus="errors.remove('password', 'form-1')">
                 <p class="error" v-show="errors.has('form-1.password')">{{ errors.first('form-1.password') }}</p>
             </p>
             <button name="button" type="submit" class="login-btn">登   录</button>
         </form>
-        <button class="login-btn" @click="bbb()">aaaa</button>
-        <!--<router-link class="login-btn" to="/readme">to readme page</router-link>-->
+        <!--<button class="login-btn" @click="bbb()"><span>{{ phone }}</span></button>
+        <router-link class="login-btn" to="/readme">to readme page</router-link>-->
     </div>
 </template>
 
@@ -31,9 +44,15 @@
                 }
             }
         },
+        computed: {
+            phone () {
+                return this.$store.state.phone
+            }
+        },
         methods: {
             login(scope) {
                 let self = this
+
                 self.$validator.validateAll(scope).then((result) => {
                     if(result){
                         self.$axios.post(
@@ -49,8 +68,9 @@
                 })
             },
             bbb() {
-                console.log(this.$store.state.count)
-                console.log(this.$store.state.a)
+                this.$store.dispatch('actionA', '3434343434343').then(() => {
+                    console.log(1212121212)             //用以处理异步操作
+                })
             }
         }
     }
