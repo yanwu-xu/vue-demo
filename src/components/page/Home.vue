@@ -1,6 +1,6 @@
 <template>
     <div class="home">
-        <router-view></router-view>
+        <router-view class="main-view"></router-view>
         <v-footer></v-footer>
     </div>
 </template>
@@ -27,5 +27,8 @@
     @import "../../../static/css/rem.scss";
     .home{
 
+    }
+    .main-view{
+        padding-bottom: px2rem(130);
     }
 </style>

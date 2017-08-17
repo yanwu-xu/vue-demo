@@ -27,8 +27,8 @@
             </p>
             <button name="button" type="submit" class="login-btn">登   录</button>
         </form>
-        <!--<button class="login-btn" @click="bbb()"><span>{{ phone }}</span></button>
-        <router-link class="login-btn" to="/readme">to readme page</router-link>-->
+        <button class="login-btn" @click="bbb()"><span>{{ phone }}</span></button>
+        <router-link class="login-btn" to="/readme">to readme page</router-link>
     </div>
 </template>
 

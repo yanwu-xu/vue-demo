@@ -161,7 +161,7 @@
                 color: #444;
             }
             .tip{
-                padding: px2rem(2) px2rem(17);
+                padding: px2rem(8) px2rem(17) px2rem(2);
                 margin-left: px2rem(10);
                 border: 1px solid red;
                 font-size: px2rem(25);
