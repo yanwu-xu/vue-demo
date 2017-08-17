@@ -22,6 +22,14 @@ export default new Router({
                     meta: {
                         //requireAuth: true
                     },
+                },
+                {
+                    path: '/proDetail',
+                    component: resolve => require(['../components/page/proDetail.vue'], resolve)
+                },
+                {
+                    path: '/mine',
+                    component: resolve => require(['../components/page/mine.vue'], resolve)
                 }
             ]
         },
