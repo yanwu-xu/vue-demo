@@ -11,7 +11,8 @@
                        v-validate="'required|mobile'"
                        placeholder="请输入手机号"
                        @focus="errors.remove('phone', 'form-1')">
-                <p class="error" v-show="errors.has('form-1.phone')">{{ errors.first('form-1.phone') }}</p>
+                <p class="error" v-show="errors.firstByRule('phone', 'required', 'form-1')">{{ errors.firstByRule('phone', 'required', 'form-1') }}</p>
+                <p class="error" v-show="errors.firstByRule('phone', 'mobile', 'form-1')">请输入正确手机号！</p>
             </p>
             <p :class="{'input-p':true, 'error-p':errors.has('form-1.password')}">
                 <label class="input-label">登录密码</label>
@@ -25,7 +26,7 @@
                        @focus="errors.remove('password', 'form-1')">
                 <p class="error" v-show="errors.has('form-1.password')">{{ errors.first('form-1.password') }}</p>
             </p>
-            <button name="button" type="submit" class="login-btn">登   录</button>
+            <button name="button" type="submit" class="login-btn" disabled>登   录</button>
         </form>
         <button class="login-btn" @click="bbb()"><span>{{ phone }}</span></button>
         <router-link class="login-btn" to="/readme">to readme page</router-link>
