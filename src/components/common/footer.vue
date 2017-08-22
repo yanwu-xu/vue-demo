@@ -10,8 +10,6 @@
 </template>
 
 <script>
-    import $ from 'jquery'
-
     export default {
         data: function() {
             return{
@@ -60,9 +58,10 @@
             }
         },
         mounted() {
-            for(let i = 0;i < $('.router-link').length; i++){
-                if($('.router-link')[i] === $('.router-link-exact-active')[0]){
-                    console.log($('.router-link')[i])
+            let self = this
+            for(let i = 0;i < self.$('.router-link').length; i++){
+                if(self.$('.router-link')[i] === self.$('.router-link-exact-active')[0]){
+                    //console.log(self.$('.router-link')[i])
                 }
             }
         },

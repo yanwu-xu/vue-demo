@@ -5,11 +5,16 @@ import Vue from 'vue'
 import App from './app'
 import "babel-polyfill"								//Babel默认只转换新的JavaScript句法（syntax），而不转换新的API
 import router from './router/router.js'
-//import VueResource from 'vue-resource'
+import Vuex from 'vuex'
 import axios from 'axios'			//ajax插件
 import VeeValidate, { Validator } from 'vee-validate'
+import jquery from 'jquery'
+
 import '../static/css/reset.css'
-import Vuex from 'vuex'
+
+Vue.prototype.$axios = axios        //全局绑定第三方库
+Vue.prototype.$ = jquery
+
 
 //自定义规则
 const isMobile = {
@@ -38,9 +43,9 @@ Vue.use(VeeValidate, {
     events: 'blur',     //失焦校验
     //delay: 500           //延迟
 })
-//Vue.use(VueResource)            //拦截器
+
 Vue.use(Vuex)
-Vue.prototype.$axios = axios
+
 
 //拦截器
 axios.interceptors.response.use(
