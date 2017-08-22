@@ -2,7 +2,7 @@
     <div class="home">
         <div class="swiper-container">
             <div class="swiper-wrapper">
-                <div class="swiper-slide" v-for="item in swiper">
+                <div class="swiper-slide" v-for="item in swiper" :key="item.id">
                     <a :href="item.hrefPath"><img class="swiper-img" :src="item.imagePath" :alt="item.altStatus"></a>
                 </div>
             </div>

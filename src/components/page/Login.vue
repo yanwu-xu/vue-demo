@@ -26,7 +26,7 @@
                        @focus="errors.remove('password', 'form-1')">
                 <p class="error" v-show="errors.has('form-1.password')">{{ errors.first('form-1.password') }}</p>
             </p>
-            <button name="button" type="submit" class="login-btn" disabled>登   录</button>
+            <button name="button" type="submit" class="login-btn">登   录</button>
         </form>
         <button class="login-btn" @click="bbb()"><span>{{ phone }}</span></button>
         <router-link class="login-btn" to="/readme">to readme page</router-link>
