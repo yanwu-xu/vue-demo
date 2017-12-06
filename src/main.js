@@ -56,7 +56,11 @@ axios.interceptors.response.use(
         if (error.response) {
             switch (error.response.status) {
                 case 400:
-                    console.log('拦截器')
+                    console.log('拦截器400')
+                    break
+                case 500:
+                    console.log('拦截器500')
+                    break
             }
         }
         return Promise.reject(error)   // 返回接口返回的错误信息
