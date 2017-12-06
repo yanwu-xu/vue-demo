@@ -80,55 +80,55 @@
 <style lang="scss" scoped>
     @import "../../../static/css/rem.scss";
     .input-p{
-        margin-top: px2rem(2);
-        width: px2rem(58);
-        height: px2rem(5);
-        line-height: px2rem(5);
-        padding: px2rem(1);
-        border: 1px solid #bebebe;
-        border-radius: 4px;
+        margin-top: 20px;
+        width: 580px;
+        height: 50px;
+        line-height: 50px;
+        padding: 10px;
+        border: 1px solid #bebebe;/*no*/
+        border-radius: 4px;/*no*/
         .input-label{
             float: left;
         }
         .input-inp{
             float: right;
-            width: px2rem(40);
+            width: 400px;
             outline: none;
             border: none;
-            height: px2rem(5);
+            height: 50px;
             font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
-            font-size: px2rem(3);
+            font-size: 30px;/*px*/
         }
     }
     .login{
         background: #fff;
-        padding: px2rem(5) 0;
+        padding: 50px 0;/*no*/
         display: flex;
         align-items: center;
         flex-wrap: wrap;
         flex-direction: column;
     }
     .login-btn{
-        width: px2rem(60);
-        height: px2rem(7);
-        line-height: px2rem(7);
-        font-size: px2rem(3);
+        width: 600px;
+        height: 70px;
+        line-height: 70px;
+        font-size: 30px;/*px*/
         font-weight: 100;
         background: #f0b933;
         color: #fff;
         border: none;
         outline: none;
-        border-radius: 4px;
-        margin-top: px2rem(4);
+        border-radius: 4px;/*no*/
+        margin-top: 40px;
         text-align: center;
     }
     .error{
         color: #ee4919;
-        font-size: 14px;
-        margin-left: px2rem(3);
+        font-size: 14px;/*px*/
+        margin-left: 30px;
         margin-top: 5px;
     }
     .error-p{
-        border: 1px solid #ee4919;
+        border: 1px solid #ee4919;/*no*/
     }
 </style>

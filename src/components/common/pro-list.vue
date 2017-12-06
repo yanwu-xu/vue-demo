@@ -35,55 +35,55 @@
     .product{
         .borderNone{
             border: none;
-            margin-bottom: px2rem(2);
+            margin-bottom: 20px;
         }
     }
     .pro-item{
-        border-bottom: 1px solid #cbcbcb;
+        border-bottom: 1px solid #cbcbcb;/*no*/
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
-        padding: px2rem(1.2) 0;
+        padding: 12px 0;
     }
     .product-list{
-        padding: 0 px2rem(2.8);
+        padding: 0 20px;
         background: #fff;
         .pro-icon{
-            width: px2rem(6.5);
-            height: px2rem(10);
+            width: 65px;
+            height: 100px;
             display: flex;
             align-items: center;
             img{
-                width: px2rem(6);
+                width: 60px;
             }
         }
         .arrow-r{
-            width: px2rem(2);
-            height: px2rem(10);
+            width: 20px;
+            height: 100px;
             display: flex;
             align-items: center;
             img{
-                width: px2rem(2);
+                width: 20px;
             }
         }
         .pro-div{
-            width: px2rem(45);
-            height:px2rem(10);
-            line-height: px2rem(5);
+            width: 470px;
+            height:100px;
+            line-height: 50px;
             .name{
                 font-weight: 900;
-                font-size: px2rem(2.7);
+                font-size: 27px;/*px*/
                 color: #444;
             }
             .tip{
-                padding: px2rem(0.8) px2rem(1.7) px2rem(0.2);
-                margin-left: px2rem(1);
-                border: 1px solid red;
-                font-size: px2rem(2.5);
-                border-radius: px2rem(5);
+                padding: 8px 17px 2px;
+                margin-left: 10px;
+                border: 1px solid red;/*no*/
+                font-size: 25px;/*px*/
+                border-radius: 50px;
             }
             .desc{
-                font-size: px2rem(2.3);
+                font-size: 23px;/*px*/
                 color: #999;
             }
         }

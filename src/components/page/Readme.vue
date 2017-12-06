@@ -100,9 +100,9 @@
 
     .swiper-container, .swiper-img{
         width: 100%;
-        height: px2rem(35);
+        height: 350px;
     }
     .product{
-        margin-top: px2rem(2);
+        margin-top: 20px;
     }
 </style>

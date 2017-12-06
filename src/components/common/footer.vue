@@ -110,8 +110,8 @@
 
     .footer{
         width: 100%;
-        height: px2rem(12);
-        border-top: 1px solid #dbdad7;
+        height: 120px;
+        border-top: 1px solid #dbdad7;/*no*/
         position: fixed;
         bottom: 0;
         justify-content: space-around;
@@ -121,13 +121,13 @@
             display: flex;
             align-items: center;
             flex-direction: column;
-            padding: px2rem(2) 0;
+            padding: 20px 0;
         }
         img{
-            width: px2rem(4);
+            width: 40px;
         }
         .name{
-            font-size: px2rem(2.5);
+            font-size: 25px;/*px*/
             color: #666
         }
     }
