@@ -9,7 +9,7 @@ import Vuex from 'vuex'
 import axios from 'axios'			//ajax插件
 import VeeValidate, { Validator } from 'vee-validate'
 import jquery from 'jquery'
-
+import 'lib-flexible'
 import '../static/css/reset.css'
 
 Vue.prototype.$axios = axios        //全局绑定第三方库

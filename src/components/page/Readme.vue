@@ -18,6 +18,7 @@
 
 <script>
     document.title = '首页'
+
     import swiper from 'swiper'
     import proList from '../common/pro-list.vue'
 
@@ -99,9 +100,9 @@
 
     .swiper-container, .swiper-img{
         width: 100%;
-        height: px2rem(350);
+        height: px2rem(35);
     }
     .product{
-        margin-top: px2rem(20);
+        margin-top: px2rem(2);
     }
 </style>

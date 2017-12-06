@@ -29,6 +29,6 @@
 
     }
     .main-view{
-        padding-bottom: px2rem(130);
+        padding-bottom: px2rem(13);
     }
 </style>

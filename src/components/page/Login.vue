@@ -30,6 +30,7 @@
         </form>
         <button class="login-btn" @click="bbb()"><span>{{ phone }}</span></button>
         <router-link class="login-btn" to="/readme">to readme page</router-link>
+        <div class="ababab"></div>
     </div>
 </template>
 
@@ -79,12 +80,17 @@
 
 <style lang="scss" scoped>
     @import "../../../static/css/rem.scss";
+    .ababab{
+        width:100px;
+        height: 50px;/*no*/
+        border: 1px solid red;/*no*/
+    }
     .input-p{
-        margin-top: px2rem(20);
-        width: px2rem(580);
-        height: px2rem(50);
-        line-height: px2rem(50);
-        padding: px2rem(10);
+        margin-top: px2rem(2);
+        width: px2rem(58);
+        height: px2rem(5);
+        line-height: px2rem(5);
+        padding: px2rem(1);
         border: 1px solid #bebebe;
         border-radius: 4px;
         .input-label{
@@ -92,40 +98,40 @@
         }
         .input-inp{
             float: right;
-            width: px2rem(400);
+            width: px2rem(40);
             outline: none;
             border: none;
-            height: px2rem(50);
+            height: px2rem(5);
             font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
-            font-size: px2rem(30);
+            font-size: px2rem(3);
         }
     }
     .login{
         background: #fff;
-        padding: px2rem(50) 0;
+        padding: px2rem(5) 0;
         display: flex;
         align-items: center;
         flex-wrap: wrap;
         flex-direction: column;
     }
     .login-btn{
-        width: px2rem(602);
-        height: px2rem(70);
-        line-height: px2rem(70);
-        font-size: px2rem(30);
+        width: px2rem(60);
+        height: px2rem(7);
+        line-height: px2rem(7);
+        font-size: px2rem(3);
         font-weight: 100;
         background: #f0b933;
         color: #fff;
         border: none;
         outline: none;
         border-radius: 4px;
-        margin-top: px2rem(40);
+        margin-top: px2rem(4);
         text-align: center;
     }
     .error{
         color: #ee4919;
         font-size: 14px;
-        margin-left: px2rem(30);
+        margin-left: px2rem(3);
         margin-top: 5px;
     }
     .error-p{

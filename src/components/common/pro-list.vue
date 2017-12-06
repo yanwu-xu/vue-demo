@@ -35,7 +35,7 @@
     .product{
         .borderNone{
             border: none;
-            margin-bottom: px2rem(20);
+            margin-bottom: px2rem(2);
         }
     }
     .pro-item{
@@ -43,47 +43,47 @@
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
-        padding: px2rem(12) 0;
+        padding: px2rem(1.2) 0;
     }
     .product-list{
-        padding: 0 px2rem(28);
+        padding: 0 px2rem(2.8);
         background: #fff;
         .pro-icon{
-            width: px2rem(65);
-            height: px2rem(100);
+            width: px2rem(6.5);
+            height: px2rem(10);
             display: flex;
             align-items: center;
             img{
-                width: px2rem(60);
+                width: px2rem(6);
             }
         }
         .arrow-r{
-            width: px2rem(20);
-            height: px2rem(100);
+            width: px2rem(2);
+            height: px2rem(10);
             display: flex;
             align-items: center;
             img{
-                width: px2rem(20);
+                width: px2rem(2);
             }
         }
         .pro-div{
-            width: px2rem(450);
-            height:px2rem(100);
-            line-height: px2rem(50);
+            width: px2rem(45);
+            height:px2rem(10);
+            line-height: px2rem(5);
             .name{
                 font-weight: 900;
-                font-size: px2rem(27);
+                font-size: px2rem(2.7);
                 color: #444;
             }
             .tip{
-                padding: px2rem(8) px2rem(17) px2rem(2);
-                margin-left: px2rem(10);
+                padding: px2rem(0.8) px2rem(1.7) px2rem(0.2);
+                margin-left: px2rem(1);
                 border: 1px solid red;
-                font-size: px2rem(25);
-                border-radius: px2rem(50);
+                font-size: px2rem(2.5);
+                border-radius: px2rem(5);
             }
             .desc{
-                font-size: px2rem(23);
+                font-size: px2rem(2.3);
                 color: #999;
             }
         }
