@@ -30,7 +30,6 @@
         </form>
         <button class="login-btn" @click="bbb()"><span>{{ phone }}</span></button>
         <router-link class="login-btn" to="/readme">to readme page</router-link>
-        <div class="ababab"></div>
     </div>
 </template>
 
@@ -80,11 +79,6 @@
 
 <style lang="scss" scoped>
     @import "../../../static/css/rem.scss";
-    .ababab{
-        width:100px;
-        height: 50px;/*no*/
-        border: 1px solid red;/*no*/
-    }
     .input-p{
         margin-top: px2rem(2);
         width: px2rem(58);
