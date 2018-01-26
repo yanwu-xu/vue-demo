@@ -1,9 +1,8 @@
 {
-  "name": "manage-system",
-  "version": "2.1.0",
-  "description": "基于Vue.js 2.x系列 + element-ui 内容管理系统解决方案",
-  "author": "lin-xin <2981207131@qq.com>",
-  "private": true,
+  "name": "vue-demo",
+  "version": "1.0.0",
+  "description": "vue-demo",
+  "author": "xudongdong",
   "scripts": {
     "dev": "node build/dev-server.js",
     "build": "node build/build.js",
