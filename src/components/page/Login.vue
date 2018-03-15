@@ -30,7 +30,6 @@
         </form>
         <button class="login-btn" @click="bbb()"><span>{{ phone }}</span></button>
         <router-link class="login-btn" to="/readme">to readme page</router-link>
-        <img src="../../img/qqjt.png" />
     </div>
 </template>
 
