@@ -25,9 +25,6 @@
 
 <style lang="scss" scoped>
     @import "../../../static/css/rem.scss";
-    .home{
-
-    }
     .main-view{
         padding-bottom: 130px;
     }
