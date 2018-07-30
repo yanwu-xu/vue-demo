@@ -1,7 +1,7 @@
 <template>
     <div class="login">
         <form @submit.prevent="login('form-1')" data-vv-scope="form-1">
-            <p :class="{'input-p':true, 'error-p':errors.has('form-1.phone')}">
+            <div :class="{'input-p':true, 'error-p':errors.has('form-1.phone')}">
                 <label class="input-label">手机号</label>
                 <input class="input-inp"
                        type="number"
@@ -13,8 +13,8 @@
                        @focus="errors.remove('phone', 'form-1')">
                 <p class="error" v-show="errors.firstByRule('phone', 'required', 'form-1')">{{ errors.firstByRule('phone', 'required', 'form-1') }}</p>
                 <p class="error" v-show="errors.firstByRule('phone', 'mobile', 'form-1')">请输入正确手机号！</p>
-            </p>
-            <p :class="{'input-p':true, 'error-p':errors.has('form-1.password')}">
+            </div>
+            <div :class="{'input-p':true, 'error-p':errors.has('form-1.password')}">
                 <label class="input-label">登录密码</label>
                 <input class="input-inp"
                        type="password"
@@ -25,7 +25,7 @@
                        placeholder="请输入密码"
                        @focus="errors.remove('password', 'form-1')">
                 <p class="error" v-show="errors.has('form-1.password')">{{ errors.first('form-1.password') }}</p>
-            </p>
+            </div>
             <button name="button" type="submit" class="login-btn">登   录</button>
         </form>
         <button class="login-btn" @click="bbb()"><span>{{ phone }}</span></button>

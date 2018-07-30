@@ -3,6 +3,7 @@ var utils = require('./utils')
 var webpack = require('webpack')
 var config = require('../config')
 var vueLoaderConfig = require('./vue-loader.conf')
+var ImageminPlugin = require('imagemin-webpack-plugin').default
 
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
@@ -66,6 +67,12 @@ module.exports = {
             options: {
                 vue: vueLoaderConfig
             }
-        })
+        }),
+        new ImageminPlugin({
+            disable: process.env.NODE_ENV !== 'production',
+            pngquant: {
+              quality: '95-100'
+            }
+          })
     ]
 }
