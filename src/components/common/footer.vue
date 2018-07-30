@@ -111,7 +111,7 @@
     .footer{
         width: 100%;
         height: 120px;
-        border-top: 1px solid #dbdad7;/*no*/
+        border-top: 1px solid #c0b185;/*no*/
         position: fixed;
         bottom: 0;
         justify-content: space-around;
